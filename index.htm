@@ -1,162 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UniPets - Coming Soon</title>
     <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-            overflow-x: hidden;
-            background-color: #1a1a1a;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-            position: relative;
-            z-index: 1;
-        }
-        
-        /* Background Animation */
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-            animation: backgroundAnimation 15s ease-in-out infinite;
-            z-index: -1;
-        }
+      /* General Styles */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Arial", sans-serif;
+        overflow-x: hidden;
+        background-color: #1a1a1a;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+        position: relative;
+        z-index: 1;
+      }
 
-        @keyframes backgroundAnimation {
-            0% {
-                background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-            }
-            50% {
-                background: radial-gradient(circle at top, rgba(255, 105, 180, 0.7), rgba(0, 255, 255, 0.1));
-            }
-            100% {
-                background: radial-gradient(circle at center, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
-            }
-        }
+      /* Background Animation */
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(
+          circle at center,
+          rgba(0, 0, 0, 0.7),
+          rgba(0, 0, 0, 0.1)
+        );
+        animation: backgroundAnimation 15s ease-in-out infinite;
+        z-index: -1;
+      }
 
-        /* Title */
-        h1 {
-            font-size: 50px;
-            font-weight: bold;
-            margin: 20px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
-            animation: titleAnimation 2s ease-in-out;
+      @keyframes backgroundAnimation {
+        0% {
+          background: radial-gradient(
+            circle at center,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+          );
         }
+        50% {
+          background: radial-gradient(
+            circle at top,
+            rgba(255, 105, 180, 0.7),
+            rgba(0, 255, 255, 0.1)
+          );
+        }
+        100% {
+          background: radial-gradient(
+            circle at center,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.1)
+          );
+        }
+      }
 
-        @keyframes titleAnimation {
-            0% {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+      /* Title */
+      h1 {
+        font-size: 50px;
+        font-weight: bold;
+        margin: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
+        animation: titleAnimation 2s ease-in-out;
+      }
 
-        /* Coming Soon Text */
-        p {
-            font-size: 24px;
-            font-weight: lighter;
-            margin-top: 20px;
-            animation: fadeIn 3s ease-in-out;
+      @keyframes titleAnimation {
+        0% {
+          opacity: 0;
+          transform: translateY(-30px);
         }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
+      /* Coming Soon Text */
+      p {
+        font-size: 24px;
+        font-weight: lighter;
+        margin-top: 20px;
+        animation: fadeIn 3s ease-in-out;
+      }
 
-        /* Button Styles */
-        .download-btn {
-            padding: 15px 30px;
-            font-size: 20px;
-            color: #fff;
-            background-color: #ff8c00;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            text-decoration: none;
-            margin-top: 30px;
-            transition: transform 0.3s ease, background-color 0.3s ease;
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
         }
+        100% {
+          opacity: 1;
+        }
+      }
 
-        .download-btn:hover {
-            transform: scale(1.1);
-            background-color: #e07b00;
-        }
+      /* Button Styles */
+      .download-btn {
+        padding: 15px 30px;
+        font-size: 20px;
+        color: #fff;
+        background-color: #ff8c00;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        text-decoration: none;
+        margin-top: 30px;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+      }
 
-        .download-btn:active {
-            transform: scale(0.9);
-        }
+      .download-btn:hover {
+        transform: scale(1.1);
+        background-color: #e07b00;
+      }
 
-        /* Additional Fun Animations */
-        .floating-icons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 40px;
-            animation: iconFloat 6s infinite ease-in-out;
-        }
+      .download-btn:active {
+        transform: scale(0.9);
+      }
 
-        .icon {
-            font-size: 40px;
-            transition: transform 0.3s ease;
-        }
+      /* Additional Fun Animations */
+      .floating-icons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+        animation: iconFloat 6s infinite ease-in-out;
+      }
 
-        .icon:hover {
-            transform: rotate(360deg);
-        }
+      .icon {
+        font-size: 40px;
+        transition: transform 0.3s ease;
+      }
 
-        @keyframes iconFloat {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-            100% {
-                transform: translateY(0);
-            }
+      .icon:hover {
+        transform: rotate(360deg);
+      }
+
+      @keyframes iconFloat {
+        0% {
+          transform: translateY(0);
         }
+        50% {
+          transform: translateY(-20px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <!-- Background Animation -->
     <div class="background"></div>
 
     <h1>UniPets</h1>
     <p>Coming Soon...</p>
 
-    <!-- Download Button -->
-    <a href="#" class="download-btn">Download Our App</a>
+    <!-- Replace the current download button with this -->
+    <a
+      href="downloads/build-Windows.zip"
+      download="UniPets.zip"
+      class="download-btn"
+      >Download Our App</a
+    >
 
     <!-- Floating Icons (Optional Fun) -->
     <div class="floating-icons">
-        <span class="icon">🐾</span>
-        <span class="icon">🐶</span>
-        <span class="icon">🐱</span>
+      <span class="icon">🐾</span>
+      <span class="icon">🐶</span>
+      <span class="icon">🐱</span>
     </div>
-
-</body>
+  </body>
 </html>

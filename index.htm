@@ -3,179 +3,282 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniPets - Coming Soon</title>
-    <style>
-      /* General Styles */
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Arial", sans-serif;
-        overflow-x: hidden;
-        background-color: #1a1a1a;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        text-align: center;
-        position: relative;
-        z-index: 1;
-      }
-
-      /* Background Animation */
-      .background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: radial-gradient(
-          circle at center,
-          rgba(0, 0, 0, 0.7),
-          rgba(0, 0, 0, 0.1)
-        );
-        animation: backgroundAnimation 15s ease-in-out infinite;
-        z-index: -1;
-      }
-
-      @keyframes backgroundAnimation {
-        0% {
-          background: radial-gradient(
-            circle at center,
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.1)
-          );
-        }
-        50% {
-          background: radial-gradient(
-            circle at top,
-            rgba(255, 105, 180, 0.7),
-            rgba(0, 255, 255, 0.1)
-          );
-        }
-        100% {
-          background: radial-gradient(
-            circle at center,
-            rgba(0, 0, 0, 0.7),
-            rgba(0, 0, 0, 0.1)
-          );
-        }
-      }
-
-      /* Title */
-      h1 {
-        font-size: 50px;
-        font-weight: bold;
-        margin: 20px;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.5);
-        animation: titleAnimation 2s ease-in-out;
-      }
-
-      @keyframes titleAnimation {
-        0% {
-          opacity: 0;
-          transform: translateY(-30px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Coming Soon Text */
-      p {
-        font-size: 24px;
-        font-weight: lighter;
-        margin-top: 20px;
-        animation: fadeIn 3s ease-in-out;
-      }
-
-      @keyframes fadeIn {
-        0% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-
-      /* Button Styles */
-      .download-btn {
-        padding: 15px 30px;
-        font-size: 20px;
-        color: #fff;
-        background-color: #ff8c00;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        text-decoration: none;
-        margin-top: 30px;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-      }
-
-      .download-btn:hover {
-        transform: scale(1.1);
-        background-color: #e07b00;
-      }
-
-      .download-btn:active {
-        transform: scale(0.9);
-      }
-
-      /* Additional Fun Animations */
-      .floating-icons {
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-        margin-top: 40px;
-        animation: iconFloat 6s infinite ease-in-out;
-      }
-
-      .icon {
-        font-size: 40px;
-        transition: transform 0.3s ease;
-      }
-
-      .icon:hover {
-        transform: rotate(360deg);
-      }
-
-      @keyframes iconFloat {
-        0% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-20px);
-        }
-        100% {
-          transform: translateY(0);
-        }
-      }
-    </style>
+    <title>UniPets - Virtual Pet Companions for Students</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Background Animation -->
-    <div class="background"></div>
+    <!-- Header & Navigation -->
+    <header>
+      <div class="container nav-container">
+        <a href="#" class="logo">Uni<span>Pets</span></a>
+        <div class="menu-toggle">
+          <i class="fas fa-bars"></i>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#download" class="btn">Download</a></li>
+        </ul>
+      </div>
+    </header>
 
-    <h1>UniPets</h1>
-    <p>Coming Soon...</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="background"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">UniPets</h1>
+        <p class="hero-subtitle">
+          Virtual pets that help university students combat loneliness and
+          stress
+        </p>
+        <a href="downloads/build-Windows.zip" download="UniPets.zip" class="btn"
+          >Download Now</a
+        >
 
-    <!-- Replace the current download button with this -->
-    <a
-      href="downloads/build-Windows.zip"
-      download="UniPets.zip"
-      class="download-btn"
-      >Download Our App</a
-    >
+        <div class="floating-icons">
+          <span class="icon">🐾</span>
+          <span class="icon">🐶</span>
+          <span class="icon">🐱</span>
+          <span class="icon">🐰</span>
+        </div>
+      </div>
+    </section>
 
-    <!-- Floating Icons (Optional Fun) -->
-    <div class="floating-icons">
-      <span class="icon">🐾</span>
-      <span class="icon">🐶</span>
-      <span class="icon">🐱</span>
-    </div>
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title">Why Choose UniPets?</h2>
+        <div class="features-container">
+          <div class="feature-box">
+            <i class="fas fa-heart feature-icon"></i>
+            <h3 class="feature-title">Combat Loneliness</h3>
+            <p class="feature-text">
+              Your virtual pet is always there for companionship when you're
+              away from home and family.
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-brain feature-icon"></i>
+            <h3 class="feature-title">Stress Relief</h3>
+            <p class="feature-text">
+              Interactions with your pet are scientifically proven to reduce
+              cortisol levels and anxiety.
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-clock feature-icon"></i>
+            <h3 class="feature-title">Study Companion</h3>
+            <p class="feature-text">
+              UniPets can help you stay focused with study timers and break
+              reminders.
+            </p>
+          </div>
+          <div class="feature-box">
+            <i class="fas fa-users feature-icon"></i>
+            <h3 class="feature-title">Community</h3>
+            <p class="feature-text">
+              Connect with other UniPet owners across campus and build real
+              friendships.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how-it-works">
+      <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3 class="step-title">Download & Install</h3>
+              <p class="step-description">
+                Download UniPets for your device and follow the simple
+                installation instructions.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3 class="step-title">Customize & Name</h3>
+              <p class="step-description">
+                Personalize your pet's appearance and give them a name that
+                suits their personality.
+              </p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h3 class="step-title">Care & Grow Together</h3>
+              <p class="step-description">
+                Feed, play with, and care for your pet. They'll grow and develop
+                alongside you during your university journey.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+      <div class="container">
+        <h2 class="section-title">What Students Say</h2>
+        <div class="testimonials-container">
+          <div class="testimonial">
+            <p class="quote">Unipets is cool.</p>
+            <div class="student-info">
+              <img
+                src="https://randomuser.me/api/portraits/women/45.jpg"
+                alt="Student"
+                class="student-photo"
+              />
+              <div>
+                <p class="student-name">Emily Johnson</p>
+                <p class="student-university">University of Hull</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="quote">UniPets is the best.</p>
+            <div class="student-info">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Student"
+                class="student-photo"
+              />
+              <div>
+                <p class="student-name">James Wilson</p>
+                <p class="student-university">University of Manchester</p>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial">
+            <p class="quote">UniPets is awesome.</p>
+            <div class="student-info">
+              <img
+                src="https://randomuser.me/api/portraits/women/68.jpg"
+                alt="Student"
+                class="student-photo"
+              />
+              <div>
+                <p class="student-name">Sarah Ahmed</p>
+                <p class="student-university">University of Leeds</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+      <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <div class="faq-question">
+              Is UniPets free to use?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Yes! The basic version of UniPets is completely free. We also
+              offer a Premium version with additional pet types and features for
+              a small monthly fee.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              Which devices support UniPets?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              UniPets is available on Windows, macOS, iOS, and Android devices,
+              so you can take your pet with you anywhere!
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              What happens if I forget to feed my pet?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Don't worry! Your pet won't die, but they will become unhappy and
+              may refuse to help with your study reminders until you care for
+              them again.
+            </div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              How do I connect with other UniPets users?
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="faq-answer">
+              Through our in-app community feature! You can join groups based on
+              your university, course, or interests, and arrange meetups with
+              fellow pet owners.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+      <div class="download-content">
+        <h2 class="download-title">Get Started With UniPets Today</h2>
+        <p class="download-text">
+          Download now and meet your new virtual companion. Available for all
+          major platforms.
+        </p>
+        <a href="downloads/build-Windows.zip" download="UniPets.zip" class="btn"
+          >Download Now</a
+        >
+
+        <div class="platform-icons">
+          <i class="fab fa-windows platform"></i>
+          <i class="fab fa-apple platform"></i>
+          <i class="fab fa-android platform"></i>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-column">
+            <h3>UniPets</h3>
+            <p>
+              Virtual pet companions designed to support university students'
+              wellbeing and reduce stress.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+              <li><i class="fas fa-envelope"></i> test@hull.ac.uk</li>
+              <li>
+                <i class="fas fa-map-marker-alt"></i> University of Hull, UK
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="copyright">&copy; 2025 UniPets. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>
